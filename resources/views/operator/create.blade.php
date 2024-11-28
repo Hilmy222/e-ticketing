@@ -7,7 +7,7 @@
         <h4 class="text-[#3E25F7] text-lg font-semibold">Form Create Operator</h4>
 
         <div class="md:flex hidden items-center gap-3 text-sm font-semibold">
-            <a href="{{ route ('eo.index') }}" class="text-sm font-semibold">Operator List</a>
+            <a href="{{ route ('operator.index') }}" class="text-sm font-semibold">Operator List</a>
             <i class="material-symbols-rounded text-xl flex-shrink-0 text-default-500">chevron_right</i>
             <a href="#" class="text-sm font-semibold text-[#3E25F7]">Create Operator</a>
         </div>
