@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('event-organizer.layout.main')
 @section('content')          
 <main>
 
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- end card -->=
+        </div><!-- end card -->
     </div>
 
 </main>

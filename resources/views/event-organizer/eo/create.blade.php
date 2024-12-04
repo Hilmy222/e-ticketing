@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('event-organizer.layout.main')
 @section('content')
 <main>
 

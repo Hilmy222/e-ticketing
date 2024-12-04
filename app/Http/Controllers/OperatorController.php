@@ -8,14 +8,14 @@ class OperatorController extends Controller
 {
     public function index ()
     {
-        return view ('operator.index');
+        return view ('event-organizer.operator.index');
     }
     public function create ()
     {
-        return view ('operator.create');
+        return view ('event-organizer.operator.create');
     }
     public function show ()
     {
-        return view ('operator.show');
+        return view ('event-organizer.operator.show');
     }
 }

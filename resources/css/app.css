@@ -3,3 +3,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .custom-wysiwyg-renderer ol {
+      @apply list-decimal list-outside;
+    }
+  
+    .custom-wysiwyg-renderer ul {
+      @apply list-disc list-outside;
+    }
+  }
+  
+  @layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }

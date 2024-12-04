@@ -16,7 +16,7 @@
     <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
 
     <!-- App CSS (Mandatory in All Pages) -->
-    <link href="{{ asset('assets/css/app.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -31,42 +31,73 @@
 
         <!-- Start Sidebar -->
         <aside id="app-menu"
-            class="hs-overlay fixed inset-y-0 start-0 z-60 hidden w-sidenav min-w-sidenav -translate-x-full transform overflow-y-auto bg-default-900 transition-all duration-300 hs-overlay-open:translate-x-0 lg:bottom-0 lg:end-auto lg:z-30 lg:block lg:translate-x-0 rtl:translate-x-full rtl:hs-overlay-open:translate-x-0 rtl:lg:translate-x-0 print:hidden [--body-scroll:true] [--overlay-backdrop:true] lg:[--overlay-backdrop:false]">
-            <div class="sticky top-0 flex h-16 items-center justify-center px-6">
+            class="mt-9 hs-overlay fixed inset-y-0 start-0 z-60 hidden w-sidenav min-w-sidenav -translate-x-full transform overflow-y-auto bg-transparent transition-all duration-300 hs-overlay-open:translate-x-0 lg:bottom-0 lg:end-auto lg:z-30 lg:block lg:translate-x-0 rtl:translate-x-full rtl:hs-overlay-open:translate-x-0 rtl:lg:translate-x-0 print:hidden [--body-scroll:true] [--overlay-backdrop:true] lg:[--overlay-backdrop:false]">
+            <div class="sticky top-0 flex flex-col h-16 items-center justify-center px-6">
                 <a href="index.html">
-                    <img src="{{ asset('assets/images/logo-light.png') }}" alt="logo" class="flex h-10">
+                    <img src="{{ asset('assets/images/users/avatar-4.jpg') }}" alt="logo" class="flex h-16 rounded-full mt-7">
                 </a>
+                <span class="my-3 text-white font-medium text-lg">Ahmad Mumtaza</span>
+                <div class="w-full border border-b-gray-600"></div>
             </div>
 
-            <div class="h-[calc(100%-64px)] p-4" data-simplebar>
-                <ul class="admin-menu hs-accordion-group flex w-full flex-col gap-1.5">
+            <div class="h-[calc(100%-64px)] p-4 relative" data-simplebar>
+                <ul class="admin-menu hs-accordion-group flex w-full flex-col gap-1.5 mt-8">
                     <li class="menu-item">
-                        <a class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-default-300 transition-all hover:bg-default-100/5"
+                        <a class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-white transition-all hover:bg-default-100/5"
                             href="{{ route ('dashboard') }}">
                             <i class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">home</i>
                             Dashboard
                         </a>
                     </li>
-
                     <li class="menu-item">
+                        <a class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-white transition-all hover:bg-default-100/5"
+                            href="#">
+                            <i class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">equalizer</i>
+                            Report Analysis
+                        </a>
+                    </li>
+
+                    {{-- <li class="menu-item">
                         <a href="{{ route ('eo.index') }}"
                             class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-default-300 transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
                             <i
-                                class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">article</i>
+                                class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">group</i>
                             <span class="menu-text">Event Organizer</span>
+                        </a>
+                    </li> --}}
+                    <li class="menu-item">
+                        <a href="{{ route ('manage-event.index') }}"
+                            class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-white transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
+                            <i
+                                class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">group</i>
+                            <span class="menu-text">Manage Event</span>
                         </a>
                     </li>
                     <li class="menu-item">
                         <a href="{{ route ('operator.index') }}"
-                            class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-default-300 transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
+                            class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-white transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
                             <i
                                 class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">group</i>
                             <span class="menu-text">Manage Operator</span>
                         </a>
                     </li>
-
-                   
+                    <li class="menu-item">
+                        <a href="#"
+                            class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-white transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
+                            <i
+                                class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">settings</i>
+                            <span class="menu-text">Setting Account</span>
+                        </a>
+                    </li>
+                    
                 </ul>
+                <div class="container px-8 absolute bottom-0 inset-x-0">
+                    <div class="bg-slate-100 bg-opacity-25 border border-white rounded-lg mx-auto justify-center items-center flex text-white flex-col p-7">
+                        <span class="font-medium text-lg">Powered By</span>
+                        <img src="{{ asset('assets/images/icon/indicom.svg') }}" alt="" class="h-8 mt-4">
+                        <span class="text-sm">Technology</span>
+                    </div>
+                </div>
             </div>
         </aside>
         <!-- End Sidebar -->
@@ -76,7 +107,7 @@
 
             <!-- Topbar Start -->
             <header class="app-header">
-                <div class="h-16 flex items-center px-5 gap-4 bg-white lg:rounded-t-xl border-b border-default-100">
+                <div class="h-16 flex justify-between items-center px-5 gap-4 bg-white lg:rounded-t-xl border-b border-default-100">
                     <!-- Topbar Brand Logo -->
                     <a href="index.html" class="md:hidden flex">
                         <img src="{{ asset('assets/images/logo-sm.png') }}" class="h-6" alt="Small logo">
@@ -89,7 +120,7 @@
                     </button>
 
                     <!-- Language Dropdown Button -->
-                    <div class="ms-auto hs-dropdown relative inline-flex [--placement:bottom-right]">
+                    {{-- <div class=" ms-auto hs-dropdown relative inline-flex [--placement:bottom-right]">
                         <button type="button" class="hs-dropdown-toggle inline-flex items-center">
                             <img src="{{ asset('assets/images/flags/us.jpg') }}" alt="user-image" class="h-4 w-6">
                         </button>
@@ -123,10 +154,10 @@
                                 <span class="align-middle">Russian</span>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <!-- Fullscreen Toggle Button -->
-                    <div class="md:flex hidden">
+                    {{-- <div class="md:flex hidden">
                         <button data-toggle="fullscreen" type="button" class="nav-link p-2">
                             <span class="sr-only">Fullscreen Mode</span>
                             <span class="flex items-center justify-center size-6">
@@ -134,7 +165,7 @@
                                 <i class="i-tabler-minimize text-2xl hidden group-[-fullscreen]:flex"></i>
                             </span>
                         </button>
-                    </div>
+                    </div> --}}
 
                     <!-- Profile Dropdown Button -->
                     <div class="relative">
@@ -181,13 +212,13 @@
             @yield('content')
 
             <!-- Footer Start -->
-            <footer class="footer h-16 flex items-center px-6 border-t border-gray-200">
+            <footer class="footer h-16 flex items-center px-6 border-t border-gray-200 bg-white rounded-b-xl">
                 <div class="flex md:justify-between justify-center w-full gap-4">
                     <div>
-                        <script>document.write(new Date().getFullYear())</script> © Windzon
+                        <script>document.write(new Date().getFullYear())</script> © IndiTechnology
                     </div>
                     <div class="md:flex hidden gap-2 item-center md:justify-end">
-                        Design &amp; Develop by<a href="#" class="text-primary">MyraStudio</a>
+                        Design &amp; Develop by<a href="#" class="text-primary">IndiTechnology</a>
                     </div>
                 </div>
             </footer>

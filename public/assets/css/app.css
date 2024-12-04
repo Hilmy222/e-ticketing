@@ -670,6 +670,18 @@ select{
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+
+.label-customize {
+  cursor: pointer;
+  /* Style as you please, it will become the visible UI component. */
+}
+
+#upload-photo {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
 .form-input,.form-textarea,.form-select,.form-multiselect{
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -3989,7 +4001,13 @@ body {
   height: 100%;
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  /* background-color: rgb(17 24 39 / var(--tw-bg-opacity)); */
+  background: radial-gradient(circle at top left, rgba(255, 64, 121, 0.5), transparent 70%),
+  radial-gradient(circle at bottom right, rgba(255, 128, 192, 0.3), transparent 70%),
+  #2c1ae6;
+  background-size: cover; /* Mengatur latar belakang mencakup layar penuh */
+  background-attachment: fixed;
+  background-position: top;
   font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -4183,7 +4201,8 @@ code{
       -ms-flex-direction: column;
           flex-direction: column;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  /* background-color: rgb(255 255 255 / var(--tw-bg-opacity)); */
+  margin-top: 10px;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -4191,6 +4210,11 @@ code{
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
 }
+
+main{
+  background-color: white;
+}
+
 
 @media (min-width: 1024px){
   .page-content{
@@ -4231,7 +4255,7 @@ main{
   }
 }
 .admin-menu a.active{
-  background-color: rgb(59 130 246 / 0.1);
+  background-color: white;
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
 }
@@ -4250,11 +4274,10 @@ main{
 }
 
 .app-header{
-  position: sticky;
   top: 0px;
   z-index: 50;
   --tw-bg-opacity: 1;
-  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+  background-color: rgb(17 24 39 / 0);
 }
 
 @media (min-width: 1024px){

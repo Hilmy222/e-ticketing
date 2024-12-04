@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('event-organizer.layout.main')
 @section('content')          
 <main>
 
@@ -49,28 +49,30 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
-                                    <tr class="hover:bg-gray-100">
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
-                                            1</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                            25/11/2024</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                            Alex(under)</td>
-                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                            081234567890</td>
-                                        <td
-                                            class="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
-                                            <a class="text-primary hover:text-sky-700" href="{{ route('operator.show') }}"><i class="material-symbols-rounded px-4 rounded-md flex justify-center items-center bg-blue-600 text-white text-xl">visibility</i></a>
-                                        </td>
-                                    </tr>
+                                    @foreach (range(1, 20) as $index)
+                                        <tr class="hover:bg-gray-100">
+                                            <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium text-default-800">
+                                                {{ $index }}</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                                25/11/2024</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                                Alex(under)</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                                081234567890</td>
+                                            <td class="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
+                                                <a class="text-primary hover:text-sky-700" href="{{ route('operator.show') }}">
+                                                    <i class="material-symbols-rounded px-4 rounded-md flex justify-center items-center bg-blue-600 text-white text-xl">visibility</i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!-- end card -->=
+        </div><!-- end card -->
     </div>
 
 </main>

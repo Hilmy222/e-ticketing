@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('event-organizer.layout.main')
 @section('content')
 <main>
 
@@ -55,9 +55,7 @@
                         <p class="p-2 border border-gray-200 rounded">**********</p>
                         </div>
 
-                </div><button class="btn bg-primaryBlue font-medium rounded-lg mt-6 px-8 py-1 text-white">
-                        Submit
-                    </button>
+                </div>
 
             </div>
         </div> <!-- end card -->
