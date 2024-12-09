@@ -92,14 +92,15 @@
                         <input type="text" id="phone" class="form-input" placeholder="Input your phone">
                     </div>
                     <div class="flex flex-col">
-                        <label class="label-customize text-default-800 text-sm font-medium inline-block mb-2">Event Logo</label>
-                        <label for="upload-photo" class="bg-[#C3C3C7] rounded-full flex justify-center items-center w-16 h-16">
-                            <i class="material-symbols-rounded flex-shrink-0 font-light text-white text-4xl">add</i>
+                        <label class="text-default-800 text-sm font-medium inline-block mb-2">Event Logo</label>
+                        <label for="upload-photo" class="relative bg-[#C3C3C7] rounded-full flex justify-center items-center w-16 h-16">
+                            <i id="upload-icon" class="material-symbols-rounded flex-shrink-0 font-light text-white text-4xl">add</i>
+                            <img id="uploaded-image" class="hidden rounded-full w-16 h-16 object-cover" alt="Uploaded Image">
+                            <input type="file" id="upload-photo" class="hidden" onchange="loadFile(event)">
                         </label>
-                        <input type="file" id="upload-photo" class="" placeholder="Input your phone">
                     </div>
                     <div class="flex flex-col">
-                        <label class="label-customize text-default-800 text-sm font-medium inline-block mb-2">Logo Sponsor</label>
+                        <label class="text-default-800 text-sm font-medium inline-block mb-2">Logo Sponsor</label>
                         <label for="upload-photo" class="bg-[#C3C3C7] rounded-full flex justify-center items-center w-16 h-16">
                             <i class="material-symbols-rounded flex-shrink-0 font-light text-white text-4xl">add</i>
                         </label>

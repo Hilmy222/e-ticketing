@@ -30,6 +30,7 @@ var deleteImage = function() {
     var uploadIcon = document.getElementById('upload-icon');
     var uploadedImage = document.getElementById('uploaded-image');
     var deleteButton = document.getElementById('delete-button');
+    var uploadInput = document.getElementById('upload-photo');
     var uploadContent = document.getElementById('upload-content');
 
     // Kosongkan input file
