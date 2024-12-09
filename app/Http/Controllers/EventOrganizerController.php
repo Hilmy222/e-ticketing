@@ -8,18 +8,18 @@ class EventOrganizerController extends Controller
 {
     public function index ()
     {
-        return view ('event-organizer.eo.index');
+        return view ('admin.event-organizer.index');
     }
     public function create ()
     {
-        return view ('event-organizer.eo.create');
+        return view ('admin.event-organizer.create');
     }
     public function show ()
     {
-        return view ('event-organizer.eo.show');
+        return view ('admin.event-organizer.show');
     }
     public function login ()
     {
-        return view ('event-organizer.login');
+        return view ('admin.event-organizergin');
     }
 }

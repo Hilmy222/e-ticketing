@@ -11,9 +11,11 @@ use PHPUnit\Framework\Constraint\Operator;
     // });
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
-Route::get('/EO', [EventOrganizerController::class, 'index'])->name('eo.index');
-Route::get('/EO/create', [EventOrganizerController::class, 'create'])->name('eo.create');
-Route::get('/EO/detail', [EventOrganizerController::class, 'show'])->name('eo.show');
+Route::get('/admin/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+
+Route::get('/admin/EO', [EventOrganizerController::class, 'index'])->name('events-organizer.index');
+Route::get('/admin/EO/create', [EventOrganizerController::class, 'create'])->name('events-organizer.create');
+Route::get('/admin/EO/detail', [EventOrganizerController::class, 'show'])->name('events-organizer.show');
 
 Route::get('/operator', [OperatorController::class, 'index'])->name('operator.index');
 Route::get('/operator/create', [OperatorController::class, 'create'])->name('operator.create');

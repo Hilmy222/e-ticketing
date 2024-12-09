@@ -13,7 +13,7 @@
             </div>
         </div>
         <div>
-            <a href="{{ route ('manage-event.create.step3') }}" class="flex px-6 py-2 gap-2 items-center bg-[#3E25F7] rounded-xl cursor-pointer">
+            <a href="{{ route ('manage-event.create.step3') }}" class="flex px-6 py-2 gap-2 items-center bg-[#B309C2] rounded-xl cursor-pointer">
                 <img src="{{ asset('assets/images/icon/save.svg') }}" alt="" class="w-4 h-4">
                 <span class="text-white font-semibold">Save</span>
             </a>
@@ -59,22 +59,20 @@
                             </label>
                         </div>
 
-                        <div class="flex flex-col gap-2">
+                        <div class="flex flex-col gap-2 hidden" id="upload-content">
                             <label for="">Preview Certificate</label>
-                            <p for="" class="font-light">Title Certificate</p>
-                            <img src="" alt="" id="output" class="w-[480px] h-[270px] object-cover">
+                            <img src="" alt="" id="uploaded-image" class="hidden w-[480px] h-[270px] object-cover">
+                            <button id="delete-button" class="flex gap-2 items-center hidden bg-red-500 text-white px-2 py-1 rounded max-w-fit" onclick="deleteImage()">
+                                <i class="material-symbols-rounded text-xl flex-shrink-0 text-white">delete</i>
+                                <p class="font-medium">Delete</p>
+                            </button>
                         </div>
-
                     </div>
-                    <script>
-                        var loadFile = function(event) {
-                          var output = document.getElementById('output');
-                          output.src = URL.createObjectURL(event.target.files[0]);
-                          output.onload = function() {
-                            URL.revokeObjectURL(output.src) // free memory
-                          }
-                        };
-                      </script>
+                    <div class="flex justify-end mt-6">                        
+                        <a href=""><i class="material-symbols-rounded text-4xl flex-shrink-0 text-[#3E25F7]">arrow_circle_left</i></a>
+                        <a href=""><i class="material-symbols-rounded text-4xl flex-shrink-0 text-[#3E25F7]">arrow_circle_right</i></a>
+                    </div>
+                    
 
             </div>
         </div> <!-- end card -->

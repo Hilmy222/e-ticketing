@@ -13,7 +13,7 @@
             </div>
         </div>
         <div>
-            <a href="{{ route ('manage-event.create.step2') }}" class="flex px-6 py-2 gap-2 items-center bg-[#3E25F7] rounded-xl cursor-pointer">
+            <a href="{{ route ('manage-event.create.step2') }}" class="flex px-6 py-2 gap-2 items-center bg-[#B309C2] rounded-xl cursor-pointer">
                 <img src="{{ asset('assets/images/icon/save.svg') }}" alt="" class="w-4 h-4">
                 <span class="text-white font-semibold">Save</span>
             </a>
@@ -43,14 +43,20 @@
             <div class="p-6">
                 <div class="grid lg:grid-cols-2 gap-6 mb-6">
 
-                    <div class="col-span-2">
+                    <div class= "col-span-2">
                         <label for="event-banner" class="flex flex-col text-default-800 text-sm font-medium">Event Banner
                             <span class="text-[10px]">upload your banner event</span>
                         </label>
-                        <div class="bg-white shadow-xl w-full h-[400px] flex justify-center items-center my-6">
-                        <img src="{{ asset('assets/images/icon/upload.svg') }}" alt="" class="w-8 h-8 ">
-                        </div>
-                        <input type="file" id="">
+                        <label class="bg-white shadow-xl h-[400px] flex justify-center items-center my-6 relative" for="upload-photo">
+                            <img id="upload-icon" src="{{ asset('assets/images/icon/upload.svg') }}" alt="Upload Icon" class="w-8 h-8">
+                            <img id="uploaded-image" class="hidden w-full h-full object-cover" alt="Uploaded Image">
+                            <input type="file" id="upload-photo" class="hidden" onchange="loadFile(event)">
+                        </label>
+                        <button id="delete-button" class="flex gap-2 items-center hidden bg-red-500 text-white px-2 py-1 rounded" onclick="deleteImage()">
+                            <i class="material-symbols-rounded text-xl flex-shrink-0 text-white">delete</i>
+                            <p class="font-medium">Delete</p>
+                        </button>
+
                     </div>
                     <div class="col-span-2">
                         <label for="event-name" class="text-default-800 text-sm font-medium inline-block mb-2">Event Name</label>
@@ -119,6 +125,9 @@
                         <label for="link-stream" class="text-default-800 text-sm font-medium inline-block mb-2">link Streaming</label>
                         <input type="text" id="link-stream" class="form-input" placeholder="Input your link">
                     </div>
+                </div>
+                <div class="flex justify-end mt-6">
+                    <a href=""><i class="material-symbols-rounded text-4xl flex-shrink-0 text-[#3E25F7] ml-auto">arrow_circle_right</i></a>
                 </div>
 
             </div>

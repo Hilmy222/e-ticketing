@@ -1,14 +1,14 @@
-@extends('event-organizer.layout.main')
+@extends('admin.layout.main')
 @section('content')          
 <main>
 
     <!-- Page Title Start -->
     <div class="flex items-center md:justify-between flex-wrap gap-2 mb-6">
-        <h4 class="text-[#3E25F7] text-xl font-semibold mb-2">My Event</h4>
+        <h4 class="text-[#3E25F7] text-xl font-semibold mb-2">List Data EO</h4>
 
-        <a href="{{ route ('manage-event.create.step1') }}" class="bg-[#3E25F7] flex gap-1 items-center p-2 rounded-xl cursor-pointer">
+        <a href="{{ route ('events-organizer.create') }}" class="bg-[#3E25F7] flex gap-1 items-center p-2 rounded-xl cursor-pointer">
             <i class="material-symbols-rounded font-medium text-xl text-white">add</i>
-            <p class="text-white font-medium">Create Events</p>
+            <p class="text-white font-medium">Create EO</p>
         </a>
         {{-- <div class="md:flex hidden items-center gap-3 text-sm font-semibold">
             <a href="#" class="text-sm font-medium text-default-700">Windzon</a>
@@ -34,48 +34,42 @@
                                             No</th>
                                         <th scope="col"
                                             class="px-6 py-3 text-start text-sm text-[#374151]">
-                                            Event Created
+                                            EO ID
                                         </th>
                                         <th scop e="col"
                                             class="px-6 py-3 text-start text-sm text-[#374151]">
-                                            Event Name
+                                            Brand Name
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-start text-sm text-[#374151]">
-                                            Event Type
+                                            Email
                                         </th>
                                         <th scope="col"
                                             class="px-6 py-3 text-start text-sm text-[#374151]">
-                                            Event Status
-                                        </th>
-                                        <th scope="col"
-                                            class="px-6 py-3 text-start text-sm text-[#374151]">
-                                            Event Date
+                                            PIC Name
                                         </th>
                                         <th scope="col" class="px-6 py-3 text-start text-sm text-[#374151]">
                                             Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200">
-                                        <tr class="hover:bg-gray-100">
-                                            <td class="px-6 py-4 whitespace-nowrap text-center text-sm font-medium text-default-800">
-                                                1</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                                25/11/2024</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                                Sound Of Jakbar Vol.7</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                                Offline</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-default-800">
-                                                Published</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
-                                                13/12/2024</td>
-                                            <td class="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
-                                                <a class="text-primary hover:text-sky-700" href="{{ route('manage-event.show') }}">
-                                                    <i class="material-symbols-rounded px-4 rounded-md flex justify-center items-center bg-[#3E25F7] text-white text-xl">visibility</i>
-                                                </a>
-                                            </td>
-                                        </tr>
+                                    <tr class="hover:bg-gray-100">
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-sm font-medium text-default-800">
+                                            1</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                            1234567890700</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                            Super Soundtrack</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                            Super Soundtrack@gmail.com</td>
+                                        <td class="px-6 py-4 whitespace-nowrap text-sm text-default-800">
+                                            Taza</td>
+                                        <td
+                                            class="px-6 py-4 whitespace-nowrap text-start text-sm font-medium">
+                                            <a class="text-primary hover:text-sky-700" href="{{ route('events-organizer.show') }}"><i class="material-symbols-rounded px-4 rounded-md flex justify-center items-center bg-blue-600 text-white text-xl">visibility</i></a>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>

@@ -10,4 +10,8 @@ class DashboardController extends Controller
     {
         return view('event-organizer.dashboard');
     }
+    public function adminDashboard()
+    {
+        return view('admin.dashboard');
+    }
 }

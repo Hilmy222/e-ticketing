@@ -14,15 +14,15 @@
         </div>
         <div class="flex gap-4 items-center">
             <div>
-                <a href="{{ route ('manage-event.create.step3') }}" class="flex px-6 py-2 gap-2 items-center bg-[#3E25F7] rounded-xl cursor-pointer">
+                <a href="{{ route ('manage-event.create.step3') }}" class="flex px-6 py-2 gap-2 items-center bg-[#B309C2] rounded-xl cursor-pointer">
                     <img src="{{ asset('assets/images/icon/save.svg') }}" alt="" class="w-4 h-4">
                     <span class="text-white font-semibold">Save</span>
                 </a>
             </div>
             <div>
-                <a href="#" class="flex px-5 py-1 gap-2 items-center bg-[#3DA755] rounded-xl cursor-pointer">
-                    <i class="material-symbols-rounded text-xl flex-shrink-0 text-white">open_in_new</i>
-                    <span class="text-white font-semibold">Publish</span>
+                <a href="#" class="flex px-5 py-1 gap-2 items-center bg-[#3E25F7] rounded-xl cursor-pointer">
+                    <i class="material-symbols-rounded text-xl flex-shrink-0 text-white">visibility</i>
+                    <span class="text-white font-semibold">See</span>
                 </a>
             </div>
         </div>
@@ -53,9 +53,12 @@
                     <label for="material" class="text-default-800 text-sm font-medium inline-block mb-2">Material</label>
                     <input type="text" id="material" class="form-input" placeholder="Input your material link">
                 </div>
+                <div class="flex justify-end mt-6">
+                    <a href=""><i class="material-symbols-rounded text-4xl flex-shrink-0 text-[#3E25F7] ml-auto">arrow_circle_left</i></a>
+                </div>
             </div>
         </div> <!-- end card -->
     </div>
-
+    
 </main>
 @endsection

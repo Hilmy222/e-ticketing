@@ -4002,15 +4002,9 @@ body {
   width: 100%;
   --tw-bg-opacity: 1;
   /* background-color: rgb(17 24 39 / var(--tw-bg-opacity)); */
-  /* background: radial-gradient(circle at top left, rgba(255, 64, 121, 0.5), transparent 70%),
+  background: radial-gradient(circle at top left, rgba(255, 64, 121, 0.5), transparent 70%),
   radial-gradient(circle at bottom right, rgba(255, 128, 192, 0.3), transparent 70%),
-  #2c1ae6; */
-  background: linear-gradient(
-  to bottom, 
-  rgba(34, 10, 170), 
-  rgba(34, 10, 170), 
-  rgba(179, 9, 194 )
-  );
+  #2c1ae6;
   background-size: cover; /* Mengatur latar belakang mencakup layar penuh */
   background-attachment: fixed;
   background-position: top;
