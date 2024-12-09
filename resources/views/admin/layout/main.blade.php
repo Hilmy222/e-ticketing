@@ -36,13 +36,13 @@
                 <a href="index.html">
                     <img src="{{ asset('assets/images/users/avatar-4.jpg') }}" alt="logo" class="flex h-12 rounded-full">
                 </a>
-                <span class="my-3 text-white font-medium">Ahmad Mumtaza</span>
+                <span class="my-3 text-[#3E25F7] font-medium">Ahmad Mumtaza</span>
             </div>
 
             <div class="h-[calc(100%-64px)] p-4 relative" data-simplebar>
                 <ul class="admin-menu hs-accordion-group flex w-full flex-col gap-1.5">
                     <li class="menu-item">
-                        <a class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-white transition-all hover:bg-default-100/5"
+                        <a class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-[#3E25F7] transition-all hover:bg-default-100/5"
                             href="{{ route ('admin.dashboard') }}">
                             <i class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">home</i>
                             Dashboard
@@ -51,7 +51,7 @@
 
                      <li class="menu-item">
                         <a href="{{ route ('events-organizer.index') }}"
-                            class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-default-300 transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
+                            class="group flex items-center gap-x-3.5 rounded-md px-3 py-2 text-sm font-medium text-[#3E25F7] transition-all hover:bg-default-100/5 hs-accordion-active:bg-default-100/5">
                             <i
                                 class="material-symbols-rounded font-light text-2xl transition-all group-hover:fill-1">group</i>
                             <span class="menu-text">Event Organizer</span>
@@ -60,8 +60,8 @@
                     
                 </ul>
                 <div class="container px-8 absolute bottom-0 inset-x-0">
-                    <div class="bg-slate-100 bg-opacity-25 border border-white rounded-lg mx-auto justify-center items-center flex text-white flex-col p-7">
-                        <span class="font-medium text-lg">Powered By</span>
+                    <div class="bg-[#3E25F7] bg-opacity-70 border border-white rounded-lg mx-auto justify-center items-center flex text-white flex-col p-7">
+                        <span class="font-semibold text-lg">Powered By</span>
                         <img src="{{ asset('assets/images/icon/indicom.svg') }}" alt="" class="h-8 mt-4">
                         <span class="text-sm">Technology</span>
                     </div>

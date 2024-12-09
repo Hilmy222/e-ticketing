@@ -3,6 +3,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventOrganizerController;
 use App\Http\Controllers\OperatorController;
 use App\Http\Controllers\ManageEventController;
+use App\Http\Controllers\ParticipantsController;
 use Illuminate\Support\Facades\Route;
 use PHPUnit\Framework\Constraint\Operator;
 
@@ -20,6 +21,10 @@ Route::get('/admin/EO/detail', [EventOrganizerController::class, 'show'])->name(
 Route::get('/operator', [OperatorController::class, 'index'])->name('operator.index');
 Route::get('/operator/create', [OperatorController::class, 'create'])->name('operator.create');
 Route::get('/operator/detail', [OperatorController::class, 'show'])->name('operator.show');
+
+Route::get('/participants', [ParticipantsController::class, 'index'])->name('participants.index');
+Route::get('/participants/create', [ParticipantsController::class, 'create'])->name('participants.create');
+Route::get('/participants/detail', [ParticipantsController::class, 'show'])->name('participants.show');
 
 Route::get('/event', [ManageEventController::class, 'index'])->name('manage-event.index');
 Route::get('/event/create/step1', [ManageEventController::class, 'createStep1'])->name('manage-event.create.step1');
